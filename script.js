@@ -1,135 +1,137 @@
-// // // prompt
+// Task 1
+'use strict';
 
-// // let promptResult = Number(prompt('Enter your age'));
-
-// // if (promptResult % 2 ==0) {
-// //   console.log('ლუწი');
-// // } else {
-// //   console.log('კენტი');
-// // }
-
-// // array
-// let studentName = ['lasha', 'mariam', 'zaza', 'luka', 'nini'];
-// console.log(studentName[2]);
-
-// console.log(studentName.length);
-// console.log(studentName[studentName.length - 1]);
-
-// // nested array
-// let students = ['anna', 'nini', ['nika', 'luka'], 'dato'];
-// console.log(students[2][1]);
-
-
-// object
-
-// let userInfo = {
-//   userName: 'anna',
-//   userAge: 18,
-//   userStatus: true
-// }
-
-// console.log(userInfo.userStatus);
-
-// console.log(userInfo['userAge'])
-
-// let userNew = {
-//   userName: 'nini',
-//   userAge: 25,
-//   phone: {
-//     code: 593,
-//     tel: 4562321
-//   },
-//   hobbies: ['painting', 'music', 'sport'],
-//   commentsUser: [
-//     {
-//       id: 1,
-//       text: 'Hello World1'
-//     },
-//     {
-//       id: 2,
-//       text: 'Hello World 2'
-//     }
-//   ]
-// }
-
-// console.log(userNew.commentsUser[1].text);
-// console.log(userNew['commentsUser'][1]['text']);
-
-// let userNew2 = {
-//   nameUser: 'lasha',
-//   age: 17
-// }
-
-// userNew2.age = 18;
-// delete userNew2.nameUser;
-// userNew2.studentStatus = 'active';
-// console.log(userNew2);
-
-// loop - array
-
-// let numbers = [14, 25, 10, 4, 18, 30];
-
-// // 1. 
-// for (let i = 0; i< numbers.length; i++) {
-//   console.log(numbers[i]);
-// }
-
-
-// let numbersNew = [[14, 10], [25, 36], [2, 4]];
-
-// for(let number of numbersNew) {
-//   // console.log(number);
-//   for (let nestedValue of number) {
-//     // console.log(nestedValue);
-//     if (nestedValue < 20) {
-//       console.log(nestedValue);
-//     }
-//   }
-// }
-
-
-// for (let i = 0; i < numbersNew.length; i++) {
-//   const element = numbersNew [i];
-//   // console.log(element);
-//   for (let i = 0; i < element.length; i++) {
-//     const nestedArrayValue = element[i];
-//     // console.log(nestedArrayValue);
-//     if (nestedArrayValue > 30) {
-//       console.log(nestedArrayValue);
-//     }
-//   }
-// }
-
-
-
-
-//  for of შემოკლებული ვერსია
-
-// let names = ['anna', 'nini', 'beka'];
-// for(let item of names) {
-//   console.log(item);
-
-// }
-
-
-
-// for in
-
-// let namesNew = ['anna', 'nini', 'beka'];
-
-// for(let key in namesNew) {
-//   console.log (key);
-// }
-
-// while loop
-let namesNew2 =  ['anna', 'nini', 'beka'];
-
-let x = 0;
-while(x < namesNew2.length) {
-  console.log(namesNew2[x]);
-  x++;
+for (let i = 5; i <= 100; i++) {
+  console.log(i);
 }
 
-// breake and continiue(for, while)
+// Task 2
 
-let i = 0;
+let array1 = [1, 2, 4, -1, -3, 8, 7, 0, -5, 18, 12];
+
+for (let number of array1) {
+  // console.log(number);
+  if (number > 0 && number < 10) console.log(number);
+}
+
+// Task 3
+let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+for (let numbers of array2) {
+  // console.log(numbers);
+  if (numbers == 5) {
+    console.log('არის');
+    break;
+  }
+}
+
+// // Task 6
+let array5 = [1, 2, 3, 7, 6, 9];
+
+for (let newNumber of array5) {
+  if (newNumber == 7) {
+    continue;
+  }
+  console.log(newNumber);
+}
+
+// Task 7
+let user = {
+  firstname: 'giorgi',
+  lastname: 'smith',
+  age: 25,
+  studentStatus: 'active',
+};
+console.log(user.studentStatus);
+
+// Task 8
+let user2 = {
+  name: 'anna',
+  age: 20,
+  studentStatus: 'active',
+};
+
+// // Condition with if statement
+if (user2.age < 18 && user2.studentStatus == 'active') {
+  console.log('hello user');
+} else if (user2.name == 'levani') {
+  console.log('hello levani');
+} else if (user2.name == 'anna') {
+  console.log('hello anna');
+} else {
+  console.log(Error);
+}
+
+// Condition with ternary operator
+let result =
+  user2.age < 18 && user2.studentStatus == 'active'
+    ? 'hello user'
+    : user2.name == 'levani'
+    ? 'hello levani'
+    : user2.name == 'anna'
+    ? 'hello anna'
+    : 'error';
+console.log(result);
+
+// Task 9
+
+let array6 = [2, 3, 5, 10, 25, 24, 11, 100, 6, 7, 10];
+for (let number of array6) {
+  // console.log(number);
+  if (number % 2 == 0) {
+    console.log(number);
+  }
+}
+
+//  Task 10
+let users = [
+  {
+    username: 'giorgi',
+    status: false,
+  },
+  {
+    username: 'levani',
+    status: false,
+  },
+  {
+    username: 'anna',
+    status: true,
+  },
+];
+
+// console.log(users[2]);
+
+if (users[0].status == true) {
+  console.log(users[0]);
+} else if (users[1].status == true) {
+  console.log(users[1]);
+} else if (users[2].status == true) {
+  console.log(users[2]);
+}
+
+// Task 11
+let array7 = [32, 14, null, '40', 50];
+for (let element of array7) {
+  // console.log(Number(element));
+  if (element % 5 == 0) {
+    console.log(Number(element));
+  }
+}
+
+// Task 12
+let array8 = [
+  [2, -3, 5, 11],
+  [1, -35, -11],
+  [12, -36, -24],
+];
+for (let i = 0; i < 3; i++) {
+  const element = array8[i];
+  // console.log(element);
+  for (let index = 0; index < element.length; index++) {
+    const nestedArrayValue = element[index];
+    if (nestedArrayValue > 0) {
+      console.log(nestedArrayValue);
+    }
+  }
+}
+
+// Missing Task 4 and Task 5.
