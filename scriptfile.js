@@ -41,7 +41,7 @@ document.querySelectorAll('.grt').forEach(function (item) {
   let parag = document.createElement('p');
   parag.classList.add('text');
   parag.textContent = 'Hello';
-  parag.style.fontSize = '24px';
+  parag.style.fontSize = '20px';
 
   item.appendChild(parag);
 });
